@@ -1,0 +1,9 @@
+class Animal(ndb.Model):
+ color = ndb.StringProperty(required=False)
+ breed = ndb.StringProperty(required=True)
+ name = ndb.StringProperty(required=True)
+
+nigels_pet = Animal(color="Red", breed="gold fish", name="Charlie")
+nigels_key = nigels_pet.put()
+print "Done. Your Key is: "
+print nigels_key
